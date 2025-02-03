@@ -27,6 +27,9 @@ jobs:
 
     - name: Make script executabe
       run: chmod +x scripts/*
+
+    - name: Copy .env.example to .env
+      run: cp .env.example .env
       
     - name: Run integration script
       run:  npm run test:integration
